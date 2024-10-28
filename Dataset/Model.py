@@ -4,9 +4,9 @@ from Execution.Model import Execution
 
 
 class DatasetBase(SQLModel):
+    name: str | None = Field(default=None)
     description: str | None = Field(default=None)
     version: int | None = Field(default=1)
-    name: str | None = Field(default=None)
     file_size: int | None = Field(default=None)
     file_format: str | None = Field(default=None)
     date_created: str | None = Field(default=None)
